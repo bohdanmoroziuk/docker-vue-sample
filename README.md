@@ -66,3 +66,29 @@ npm run test:e2e
 ```sh
 npm run lint
 ```
+
+## Develop the app
+
+### Run the development stage
+
+```sh
+make dev-start
+```
+
+### Stop the development stage
+
+```sh
+make dev-stop
+```
+
+### Run the production stage
+
+```sh
+make prod-start
+```
+
+### Stop the production stage
+
+```sh
+make prod-stop
+```

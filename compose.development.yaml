@@ -8,5 +8,6 @@ services:
       - 3000:3000
     volumes:
       - ./src:/usr/src/app/src
+      - /usr/src/app/node_modules
     environment:
       NODE_ENV: development

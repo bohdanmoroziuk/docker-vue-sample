@@ -18,7 +18,7 @@ RUN --mount=type=bind,source=package.json,target=package.json \
 FROM deps as development
 COPY . .
 EXPOSE 3000
-CMD npm run dev
+CMD ["npm", "run", "dev"]
 
 ################################################################################
 FROM deps as build
@@ -28,5 +28,6 @@ RUN npm run build
 ################################################################################
 FROM nginx:${NGINX_VERSION}-alpine as production
 COPY --from=build /usr/src/app/dist /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]

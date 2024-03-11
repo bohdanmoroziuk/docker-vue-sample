@@ -1,6 +1,7 @@
 {
   "name": "docker-vue-sample",
   "version": "0.0.0",
+  "description": "Example of Dockerizing Vue Application",
   "private": true,
   "type": "module",
   "scripts": {
